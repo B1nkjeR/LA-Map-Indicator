@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en/us">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waar ons te vinden!</title>
+
+<style>
+   @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html{
+  background-color: #464745;
+  }
+body{
+  background-color: #464745;
+  }
+div{
+  margin-left: 10px;
+  background-size: cover;
+  }
+H3{
+  margin-left: 15px;
+  }
+#map{
+  width:28%;
+  height: 300px;
+  }
+</style>
+
+</head>
+<body>
+
+<H3><font color="#ffffff">Lekker Anders - waar ons te vinden</font color></H3>
+
+<div id="map"></div>
+
+<script>
+  function initMap() {
+  var emmen = {lat: 52.781, lng: 6.895};
+  var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 15,
+  center: emmen
+  });
+  var marker = new google.maps.Marker({
+  position: emmen,
+  map: map
+  });
+  }
+</script>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw_z_ras8gVRaRuCVRZ0Gadibcks0dQUU&callback=initMap">
+</script>
+
+</body>
+</html>
